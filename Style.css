@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: larger;
+    font-family: georgia, sans-serif;
+    color: black;
+}
+
+header h1 {
+    padding: 5%;
+    font-variant: small-caps;
+    border-bottom: 2px dotted blue;
+}
+
+header {
+    background-color: deepskyblue; /*tavsta värv*/
+    background-image: url("E..png.png");
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+}
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: deepskyblue; /*tavsta värv*/
+    font-variant: small-caps;
+    border-top: 2px dotted blue;
+    text-align: center;
+    margin-top: 20px;
+}
+
+main {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section#kast1 {
+    border: 1px groove lightskyblue; /*solid. doble. dashed, dotted*/
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 60px 120px 60px 120px;
+    text-align: center;
+}
+
+section#kast2 {
+    border: 10px groove lightskyblue; /*solid. doble. dashed, dotted*/
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 60px;
+    text-align: center;
+}
+
+section#kast3 {
+    border: 1px groove lightskyblue; /*solid. doble. dashed, dotted*/
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 60px 120px 60px 120px;
+    text-align: center;
+}
+
+section#kast4 {
+    border: 1px groove lightskyblue; /*solid. doble. dashed, dotted*/
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 60px 120px 60px 120px;
+    text-align: center;
+}
+
+section#kast5 {
+    border: 1px groove lightskyblue; /*solid. doble. dashed, dotted*/
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 60px 120px 60px 120px;
+    text-align: center;
+}
+
+#suurkast {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+nav ul {
+    list-style-type: none; /*täpp võtab ära*/
+    margin: 0;
+    padding: 0;
+    background-color: deepskyblue;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none; /*alljoone on kustutatud*/
+    padding: 10px;
+    border-left: 2px solid blue;
+    border-radius: 20%;
+    font-variant: small-caps;
+}
+
+nav ul li a:hover { /*link fookuses - hiir on peal*/
+    background-color: white;
+    color: black;
+}
+
+nav {
+    padding: 5px;
+    margin: 10px;
+}

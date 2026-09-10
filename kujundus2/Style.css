@@ -1,0 +1,271 @@
+/* Warcraft III Inspired Theme - Radical Layout Redistribution */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --wc-bg-dark: #0a0807;
+    --wc-panel-bg: #181412;
+    --wc-header-bg: #1d1108;
+    --wc-gold: #e1b452;
+    --wc-gold-bright: #ffea79;
+    --wc-gold-dark: #7a5a1e;
+    --wc-border: #4d381c;
+    --wc-border-light: #8c6a38;
+    --wc-text: #d8c8b0;
+    --wc-text-bright: #f0e6d2;
+    --wc-text-muted: #8d8070;
+    --wc-link: #ff9d00;
+    --wc-link-hover: #ffc800;
+    --wc-shadow: 0 5px 15px rgba(0, 0, 0, 0.85);
+}
+
+/* Overall Layout Transformation: Grid Sidebar + Main Panel */
+body {
+    background-color: var(--wc-bg-dark);
+    background-image:
+            radial-gradient(circle at 10% 20%, rgba(122, 90, 30, 0.2) 0%, transparent 50%),
+            linear-gradient(to bottom, rgba(5, 4, 3, 0.95), rgba(15, 12, 10, 0.98));
+    color: var(--wc-text);
+    font-family: 'Merriweather', Georgia, serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "nav    main"
+        "footer main";
+    gap: 0;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', Georgia, serif;
+    font-weight: 800;
+    color: var(--wc-gold);
+    text-shadow:
+            2px 2px 0px #000,
+            -1px -1px 0px #000,
+            1px -1px 0px #000,
+            -1px 1px 0px #000,
+            0 0 10px var(--wc-gold-dark);
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--wc-border-light);
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+/* Header Banner - Full Top Bar */
+header {
+    grid-area: header;
+    background-color: var(--wc-header-bg);
+    background-image: url("E..png.png");
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 40px 40px;
+    border-bottom: 3px solid var(--wc-gold);
+    box-shadow: var(--wc-shadow), inset 0 0 20px rgba(0, 0, 0, 0.8);
+    padding: 15px 20px 15px 75px;
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+/* Vertical Sidebar Navigation */
+nav {
+    grid-area: nav;
+    margin: 20px 0 20px 20px;
+    padding: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 10px;
+    background: linear-gradient(180deg, #28201a 0%, #15100c 100%);
+    border: 2px solid var(--wc-gold-dark);
+    outline: 2px solid #000;
+    box-shadow: var(--wc-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+nav ul li a {
+    display: block;
+    color: var(--wc-text-bright);
+    text-decoration: none;
+    padding: 12px 16px;
+    font-family: 'Cinzel', Georgia, serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: linear-gradient(180deg, #3d2f23 0%, #1c1510 100%);
+    border: 1px solid var(--wc-border-light);
+    border-left: 4px solid var(--wc-gold-dark);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease-in-out;
+    text-shadow: 1px 1px 2px #000;
+}
+
+nav ul li a:hover {
+    background: linear-gradient(180deg, #61461f 0%, #30200a 100%);
+    color: var(--wc-gold-bright);
+    border-color: var(--wc-gold);
+    border-left: 6px solid var(--wc-gold-bright);
+    box-shadow: 0 0 10px var(--wc-gold-dark), inset 0 1px 0 rgba(255, 234, 121, 0.3);
+}
+
+/* Main Content Area - Full Width Right Panel */
+main {
+    grid-area: main;
+    margin: 20px;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(24, 20, 18, 0.8) 0%, rgba(10, 8, 7, 0.9) 100%);
+    border: 2px solid var(--wc-border);
+    outline: 1px solid #000;
+    box-shadow: var(--wc-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Card Section Transformations */
+section#kast1,
+section#kast2,
+section#kast3,
+section#kast4,
+section#kast5 {
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #1f1813 0%, #120e0b 100%);
+    border: 2px solid var(--wc-border-light);
+    outline: 2px solid #000;
+    box-shadow: var(--wc-shadow), inset 0 0 15px rgba(0,0,0,0.8);
+    margin: 0;
+    padding: 25px;
+    border-radius: 0;
+    text-align: left;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+section#kast1:hover,
+section#kast2:hover,
+section#kast3:hover,
+section#kast4:hover,
+section#kast5:hover {
+    border-color: var(--wc-gold);
+    box-shadow: var(--wc-shadow), 0 0 12px rgba(225, 180, 82, 0.3);
+}
+
+/* Media Page Specific Realignment */
+#suurkast {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+#suurkast section,
+#suurkast sectio {
+    background: linear-gradient(135deg, #1f1813 0%, #120e0b 100%);
+    border: 2px solid var(--wc-border-light);
+    outline: 2px solid #000;
+    padding: 25px;
+    box-shadow: var(--wc-shadow);
+}
+
+/* Images & Media Gallery */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--wc-border-light);
+    box-shadow: 0 0 8px #000;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+img:hover {
+    border-color: var(--wc-gold);
+    transform: scale(1.03);
+}
+
+#pildigalerii {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+#pildigalerii h1 {
+    grid-column: 1 / -1;
+}
+
+iframe {
+    width: 100%;
+    border: 2px solid var(--wc-border-light) !important;
+    box-shadow: 0 4px 10px #000;
+}
+
+/* Links */
+a {
+    color: var(--wc-link);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--wc-link-hover);
+    text-decoration: underline;
+}
+
+/* Sidebar Footer */
+footer {
+    grid-area: footer;
+    margin: 0 0 20px 20px;
+    padding: 15px 10px;
+    background: linear-gradient(180deg, #1d1108 0%, #0a0603 100%);
+    color: var(--wc-text-muted);
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 0.8rem;
+    border: 2px solid var(--wc-gold-dark);
+    text-align: center;
+    box-shadow: var(--wc-shadow);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 850px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+
+    nav {
+        margin: 15px 20px 0 20px;
+    }
+
+    footer {
+        margin: 0 20px 20px 20px;
+    }
+}
