@@ -3,6 +3,8 @@ body {
     padding: 0;
 }
 
+
+
 h1 {
     font-size: larger;
     font-family: georgia, sans-serif;
@@ -14,7 +16,8 @@ header h1 {
     font-variant: small-caps;
     border-bottom: 2px dotted blue;
 }
-
+/*tset git*/
+/*tset git*/
 header {
     background-color: deepskyblue; /*tavsta värv*/
     background-image: url("E..png.png");
