@@ -60,3 +60,42 @@
 #taani td {
     border: 0px lightgray solid;
 }
+
+
+
+#šveits {
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 550px;
+    left: 40%;
+}
+
+
+#šveits tr:nth-child(1) td:nth-child(1),
+#šveits tr:nth-child(3) td:nth-child(1) {
+    background-color: blue;
+    width: 90px;
+}
+
+
+#šveits tr:nth-child(1) td:nth-child(3),
+#šveits tr:nth-child(3) td:nth-child(3) {
+    background-color: blue;
+}
+#šveits tr:nth-child(1) td:nth-child(2),
+#šveits tr:nth-child(3) td:nth-child(2) {
+    background-color: yellow;
+    width: 30px;
+}
+
+#šveits tr:nth-child(2) {
+    background-color: yellow;
+    height: 30px;
+}
+
+#šveits td {
+    border: 0px lightgray solid;
+}
