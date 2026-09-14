@@ -101,16 +101,27 @@
 }
 
 
-#Madagaskar {
+#madagaskar {
     width: 330px;
     height: 210px;
-    border: 1px black solid;
+    border: 1px solid lightgray;
     border-spacing: 0;
     position: absolute;
     top: 800px;
     left: 40%;
 }
 
-#madagaskar tr:nth-child(3) td:nth-child(1){
 
+#madagaskar tr:nth-child(1) td:nth-child(1) {
+    background-color: white;
+    width: 110px;
+}
+#madagaskar tr:nth-child(1) td:nth-child(2) {
+    background-color: red;
+}
+#madagaskar tr:nth-child(2) td:nth-child(1) {
+    background-color: green;
+}
+#madagaskar td {
+    border: 0;
 }
