@@ -1,0 +1,14 @@
+table#IsTabel {
+    border: 2px solid black;
+    width: 900px;
+    height: 600px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table#IsTabel td {
+    border: 2px solid black;
+    font-size: 30px;
+    height: 80px;
+    vertical-align: middle;
+}
