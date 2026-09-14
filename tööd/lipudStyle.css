@@ -99,3 +99,18 @@
 #šveits td {
     border: 0px lightgray solid;
 }
+
+
+#Madagaskar {
+    width: 330px;
+    height: 210px;
+    border: 1px black solid;
+    border-spacing: 0;
+    position: absolute;
+    top: 800px;
+    left: 40%;
+}
+
+#madagaskar tr:nth-child(3) td:nth-child(1){
+
+}
