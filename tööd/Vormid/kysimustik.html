@@ -2,70 +2,143 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
-    <title>muusika küsimustik</title>
+    <title>Muusika küsimustik</title>
+    <link rel="stylesheet" href="vormStyle.css">
 </head>
 <body>
-<h1>Muusika ksimustik</h1>
-<div>HMTL vormid ja nupud</div>
+<h1>Muusika küsimustik</h1>
+<div>HTML vormid ja nupud</div>
+<br>
+
 <form action="#">
-    <!-- c -->
-    <label for="nimi">Nimi</label>
-    <input type="text" id="nimi" name="Erik" />
-    <label for="stiil">Vali meeldivaim muusikastiil</label>
-    <br>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <!-- Nimi -->
+        <tr>
+            <td>
+                <label for="nimi">Nimi</label>
+            </td>
+            <td>
+                <input type="text" id="nimi" name="nimi" placeholder="Erik" />
+            </td>
+        </tr>
 
-    <label for="stiil">Vali meeldivaim muusikastiil</label>
-    <br>
-    <select name="stiil" id="stiil">
-        <option value="vali">vali...</option>
-        <option value="hiphop">hiphop</option>
-        <option value="kantri">kantri</option>
-        <option value="rock">rock</option>
-        <option value="metal">metal</option>
-    </select>
-    <br>
-    <!--  raadio nupud -üks valik mitmst -->
-    <strong>
-        <input type="radio" name="platvorm" id="spotify"/>
-        <label for="spotify">Spotify</label>
-        <br>
-        <input type="radio" name="platvorm" id="radio"/>
-        <label for="radio">raadio</label>
-        <br>
-        <input type="radio" name="platvorm" id="vinüülplaat"/>
-        <label for="vinüülplaat">vinüülplaat</label>
-    </strong>
+        <tr>
+            <td>
+                <label for="email">kirjuta teie email</label>
+
+            </td>
+            <td>
+                <input type="text" id="email" name="email" placeholder="erik@vormid.com" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="vanus">Kui vana te olete?</label>
+            </td>
+            <td>
+                <input type="text" id ="vanus" name="vanus" placeholder="Vanus" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="fail">Laadi fial</label>
+            </td>
+            <td>
+                <input type="file" id="fail" name="fail" placeholder="Fail" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="värv">vali värv</label>
+            </td>
+            <td>
+                <input type="color" id="värv" name="värv">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="kuupäev">vali täna kuupäev</label>
+            </td>
+            <td>
+                <input type="date" id="kuupäev" name="kuupäev"/>
+            </td>
+        </tr>
+
+        <!-- Muusikastiili valik -->
+        <tr>
+            <td>
+                <label for="stiil">Vali meeldivaim muusikastiil</label>
+            </td>
+            <td>
+                <select name="stiil" id="stiil">
+                    <option value="vali">vali...</option>
+                    <option value="hiphop">hiphop</option>
+                    <option value="kantri">kantri</option>
+                    <option value="rock">rock</option>
+                    <option value="metal">metal</option>
+                </select>
+            </td>
+        </tr>
+
+        <!-- Platvorm raadionupud -->
+        <tr>
+            <td>
+                <span>Kuulamise platvorm</span>
+            </td>
+            <td>
+                <input type="radio" name="platvorm" id="spotify" value="spotify"/>
+                <label for="spotify">Spotify</label>
+                <br>
+                <input type="radio" name="platvorm" id="radio" value="radio"/>
+                <label for="radio">Raadio</label>
+                <br>
+                <input type="radio" name="platvorm" id="vinüülplaat" value="vinyyl"/>
+                <label for="vinüülplaat">Vinüülplaat</label>
+            </td>
+        </tr>
+
+        <!-- Lemmikansamblid märkeruudud / checkboxid -->
+        <tr>
+            <td>
+                <span>Lemmik ansambel</span>
+            </td>
+            <td>
+                <fieldset>
+                    <legend>Tee oma valikud</legend>
+                    <input type="checkbox" name="lemmikud" id="SAMURAI" value="SAMURAI">
+                    <label for="SAMURAI">SAMURAI</label>
+                    <br>
+                    <input type="checkbox" name="lemmikud" id="Lifelover" value="Lifelover">
+                    <label for="Lifelover">Lifelover</label>
+                    <br>
+                    <input type="checkbox" name="lemmikud" id="Curta'n Wall" value="Curta'n Wall">
+                    <label for="Curta'n Wall">Curta'n Wall</label>
+                    <br>
+                    <input type="checkbox" name="lemmikud" id="Cracked Bascienet" value="Cracked Bascienet">
+                    <label for="Cracked Bascienet">Cracked Bascienet</label>
+                </fieldset>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="tund">Mitu tundi päevas sa kuulad muusikat?</label>
+            </td>
+            <td>
+                0 <input type="range" id="tund" name="tund" min="0" max="24" value="12"> 24
+            </td>
+        </tr>
+
+        <!--Input type=color, file, email, jne kokku 5-6tk
+        https://www.w3schools.com/Html/ -->
 
 
-    <!-- checkbox -->
-    <fieldset>
-        <lege>Tee oma valikud - lemmik ansambel</lege>
-        <br>
-        <input type="Checkbox" name="lemmikud" id="SAMURAI">
-        <label for="SAMURAI">SAMURAI</label>
-        <br>
-        <input type="Checkbox" name="lemmikud" id="Lifelover">
-        <label for="Lifelover">Lifelover</label>
-        <br>
-        <input type="Checkbox" name="lemmikud" id="Curta'n Wall">
-        <label for="Curta'n Wall">Curta'n Wall</label>
-        <br>
-        <input type="Checkbox" name="lemmikud" id="Cracked Bascienet">
-        <label for="Cracked Bascienet">Cracked Bascienet</label>
-        <br>
-    </fieldset>
-
-    <!-- range - vahemik -->
-    <label for="tund">
-        Mitu tundi päevas sa kuulad muusikat?
-    </label>
-    <br>
-    0<input type="range" id="tund" min="0" max="24" value="">24
-
+    </table>
 </form>
-
-
-
 
 </body>
 </html>
