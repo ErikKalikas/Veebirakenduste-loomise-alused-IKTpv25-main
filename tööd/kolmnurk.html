@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Map area</title>
+    <link rel="stylesheet" href="mapAreaStyle.css">
 </head>
 <body>
 <h1>Map area kasutamine</h1>
-<img src=arvutipilt.jpg alt="arvuti pilt" usemap="#arvuti">
+<img src="arvutipilt.jpg" alt="arvuti pilt" usemap="#arvuti">
 <map name="arvuti">
-    <area shape="circle" coords="554, 36, 40" href="https://arvutitark.ee/" alt="punkt" target="_blank">
+    <area shape="circle" coords="525,51,20" href="https://arvutitark.ee/" alt="punkt" target="_blank">
     <!-- circle coords=(x,y, R) -->
-    <area shape="rect" coords="175, 99,445 , 244" href="monitor.html" alt="monitor">
+    <area shape="rect" coords="175,99,445,244" href="monitor.html" alt="monitor">
     <!-- rect coords="x, y, x1, y2" -->
     <!-- komnurk - poly - tuleb võta kõik koordinadid vasakult parema-->
-    <area shape="poly" coords="20, 314, 71, 317 , 42 , 358" href="kolmnurk.html" alt="kolmnurk">
-    <!-- Ülesanne. Lisa kokku 5-6 pildiala, mis linkivad teisele failile sama sisuga -->
+    <area shape="poly" coords="20,314,71,317,42,358" href="kolmnurk.html" alt="kolmnurk">
 </map>
-<div>see on kolnurk</div>
+<div>palun tee klick hiirega pildi peal!</div>
 
-<br>
+<img src="toiteplokk.jpg" alt="toiteplokk pilt" usemap="#toiteplok">
+<map name="toiteplok">
+    <area shape="circle" coords="157,297,20" href="nukeclear.html" alt="punkt" target="_blank">
+    <area shape="circle" coords="400,290,100" href="https://aerocool.io/product/kcas-1000m/" alt="punkt" target="_blank">
+    <area shape="circle" coords="280,158,100" href="toiteplokk.html" alt="toiteplokk">
+</map>
 
-<img src="kolmnurk.png" height="166" width="192"/><a href="maparea.html">
-    <h2>tagasi</h2></a>
+
+<div class="sisu"> <img src="kolmnurk.png" alt="kolmnurk"> <div> <p>See on kolmnurk</p> </div> <a href="maparea.html"> <h2>Tagasi</h2> </a> </div>
 </body>
 </html>

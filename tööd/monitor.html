@@ -3,21 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Map area</title>
+    <link rel="stylesheet" href="mapAreaStyle.css">
 </head>
 <body>
 <h1>Map area kasutamine</h1>
-<img src=arvutipilt.jpg alt="arvuti pilt" usemap="#arvuti">
+<img src="arvutipilt.jpg" alt="arvuti pilt" usemap="#arvuti">
 <map name="arvuti">
-    <area shape="circle" coords="554, 36, 40" href="https://arvutitark.ee/" alt="punkt" target="_blank">
+    <area shape="circle" coords="525,51,20" href="https://arvutitark.ee/" alt="punkt" target="_blank">
     <!-- circle coords=(x,y, R) -->
-    <area shape="rect" coords="175, 99,445 , 100" href="monitor.html" alt="monitor">
+    <area shape="rect" coords="175,99,445,244" href="monitor.html" alt="monitor">
     <!-- rect coords="x, y, x1, y2" -->
+    <!-- komnurk - poly - tuleb võta kõik koordinadid vasakult parema-->
+    <area shape="poly" coords="20,314,71,317,42,358" href="kolmnurk.html" alt="kolmnurk">
 </map>
-<p>
-    <h2>
-         see on arvuti väljundseade, mis muudab analoog- või digitaalinfo pildiks. Kuvar on üks tähtsamaid arvuti komponente kasutajasuunalise väljundseadmena. Vajadusel kuvatakse klaviatuurilt sisestatud vastused, korraldused ja muu info. Seetõttu on see personaalarvuti juures kasutajale üks tähtsamaid seadmeid; ilma selleta on arvutiga ebamugav ja raske töötada. Personaalarvutite juurde lisatakse tavaliselt kas kineskoopkuvar (vt CRT-katoodkiirtetoru), vedelkristallkuvar (LCD), plasmakuvar ja/või OLED-kuvar.
-    </h2>
-</p>
+<div>palun tee klick hiirega pildi peal!</div>
+
+<img src="toiteplokk.jpg" alt="toiteplokk pilt" usemap="#toiteplok">
+<map name="toiteplok">
+    <area shape="circle" coords="157,297,20" href="nukeclear.html" alt="punkt" target="_blank">
+    <area shape="circle" coords="400,290,100" href="https://aerocool.io/product/kcas-1000m/" alt="punkt" target="_blank">
+    <area shape="circle" coords="280,158,100" href="toiteplokk.html" alt="toiteplokk">
+</map>
+
+
+
+<div class="monitor"> <img src="monitor.jpg" alt="monitor">
+    <div>
+    <p>
+        <h2>
+            Arvutikuvar (ka arvuti monitor, videoterminal, ekraan) on arvuti väljundseade,
+            mis muudab analoog- või digitaalinfo pildiks. Kuvar on üks tähtsamaid arvuti komponente kasutajasuunalise väljundseadmena.
+            Vajadusel kuvatakse klaviatuurilt sisestatud vastused,
+            korraldused ja muu info. Seetõttu on see personaalarvuti juures kasutajale üks tähtsamaid seadmeid;
+            ilma selleta on arvutiga ebamugav ja raske töötada.
+            Personaalarvutite juurde lisatakse tavaliselt kas kineskoopkuvar (vt CRT-katoodkiirtetoru),
+            vedelkristallkuvar (LCD), plasmakuvar ja/või OLED-kuvar.
+        </h2>
+    </p>
+</div> <a href="maparea.html"> <h2>Tagasi</h2> </a> </div>
+
+
 <a href="maparea.html"><h2>tagasi</h2></a>
 </body>
 </html>
