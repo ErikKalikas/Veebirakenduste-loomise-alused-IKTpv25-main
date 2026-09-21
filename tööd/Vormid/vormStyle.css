@@ -5,30 +5,111 @@ form {
 
 table {
     border-collapse: collapse;
-    width: 30%;
+    width: 40%;
+    margin: 0 auto;
 }
 
-table, td {
-    border-collapse: collapse;
-    width: 40%;
+td {
     border: 1px black solid;
     border-radius: 4px;
     background-color: white;
     padding: 2%;
+    text-align: left;
 }
-input[type=text] {
-    border: 1px black solid;
-    border-radius: 4px;
-    padding: 1%;
+
+fieldset {
+    text-align: left;
 }
 
 label {
     display: inline-flex;
     align-items: center;
-    gap: 5px; /* Отступ между кнопкой и текстом */
+    gap: 6px;
+    cursor: pointer;
+}
+
+input[type=text] {
+    border: 1px black solid;
+    border-radius: 4px;
+    padding: 1%;
+    background-color: #e8f0fe;
+    color: #333333;
+}
+
+input[type=email] {
+    border: 1px black solid;
+    border-radius: 4px;
+    padding: 1%;
+    background-color: #e8f0fe;
+    color: #333333;
+}
+
+input[type=file] {
+    background-color: #f0f0f0;
+    color: #333333;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+input[type=color] {
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+}
+
+input[type=date] {
+    border: 1px black solid;
+    border-radius: 4px;
+    padding: 1%;
+    background-color: #e8f0fe;
+    color: #333333;
 }
 
 input[type=radio] {
+    accent-color: red;
+}
+
+input[type=radio]:hover, input[type=radio]:focus {
+    background-color: red;
+}
+
+input[type=checkbox] {
+    accent-color: red;
+}
+
+input[type=checkbox] + label {
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: lightgrey;
+    font-size: 10pt;
+    padding: 5px;
+    width: 120px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 23px;
+    text-align: center;
     vertical-align: middle;
-    margin: 0;
+    color: black;
+}
+
+input[type=email] + label {
+    background-color: lightgrey;
+}
+
+input[type=range] {
+    accent-color: red;
+}
+
+select {
+    border: 1px black solid;
+    border-radius: 4px;
+    padding: 1%;
+    background-color: #f0f0f0;
+    color: #333333;
 }
