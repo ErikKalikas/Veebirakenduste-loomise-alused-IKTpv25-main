@@ -91,6 +91,8 @@ section#kast5 {
     padding: 1%;
     border-radius: 60px 120px 60px 120px;
     text-align: center;
+
+
 }
 
 #suurkast {
@@ -129,4 +131,23 @@ nav ul li a:hover { /*link fookuses - hiir on peal*/
 nav {
     padding: 5px;
     margin: 10px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 90%;
+}
+
+td {
+    border-bottom: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+tr:last-child td {
+    border-bottom: none;
 }
