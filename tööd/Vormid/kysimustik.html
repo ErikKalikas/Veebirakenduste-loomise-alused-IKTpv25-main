@@ -1,31 +1,38 @@
 <!DOCTYPE html>
+
 <html lang="et">
 <head>
     <meta charset="UTF-8">
     <title>Muusika küsimustik</title>
     <link rel="stylesheet" href="vormStyle.css">
+    <script src="../JavaScript/kysimustikScript.js"></script>
 </head>
+
 <body>
+
 <h1>Muusika küsimustik</h1>
 <div>HTML vormid ja nupud</div>
 <br>
 
 <form action="#">
     <table border="1" cellpadding="8" cellspacing="0">
-        <!-- Nimi -->
+
+
         <tr>
             <td>
                 <label for="nimi">Nimi</label>
             </td>
             <td>
-                <input type="text" id="nimi" name="nimi" placeholder="Erik" />
+                <input type="text" id="nimi" name="nimi" placeholder="Erik" oninput="nameReadFromBox()" />
+            </td>
+            <td>
+                <div id="vastus1"></div>
             </td>
         </tr>
 
         <tr>
             <td>
                 <label for="email">kirjuta teie email</label>
-
             </td>
             <td>
                 <input type="text" id="email" name="email" placeholder="erik@vormid.com" />
@@ -37,7 +44,7 @@
                 <label for="vanus">Kui vana te olete?</label>
             </td>
             <td>
-                <input type="text" id ="vanus" name="vanus" placeholder="Vanus" />
+                <input type="text" id="vanus" name="vanus" placeholder="Vanus" />
             </td>
         </tr>
 
@@ -68,13 +75,12 @@
             </td>
         </tr>
 
-        <!-- Muusikastiili valik -->
         <tr>
             <td>
                 <label for="stiil">Vali meeldivaim muusikastiil</label>
             </td>
             <td>
-                <select name="stiil" id="stiil">
+                <select name="stiil" id="stiil" onchange="rangeValik()">
                     <option value="vali">vali...</option>
                     <option value="hiphop">hiphop</option>
                     <option value="kantri">kantri</option>
@@ -82,26 +88,32 @@
                     <option value="metal">metal</option>
                 </select>
             </td>
+            <td>
+                <div id="vastus5"></div>
+            </td>
         </tr>
 
-        <!-- Platvorm raadionupud -->
         <tr>
             <td>
                 <span>Kuulamise platvorm</span>
             </td>
             <td>
-                <input type="radio" name="platvorm" id="spotify" value="spotify"/>
+                <input type="radio" name="platvorm" id="spotify" value="spotify" onclick="raadioValik()" />
                 <label for="spotify">Spotify</label>
                 <br>
-                <input type="radio" name="platvorm" id="radio" value="radio"/>
+
+                <input type="radio" name="platvorm" id="radio" value="radio" onclick="raadioValik()" />
                 <label for="radio">Raadio</label>
                 <br>
-                <input type="radio" name="platvorm" id="vinüülplaat" value="vinyyl"/>
+
+                <input type="radio" name="platvorm" id="vinüülplaat" value="vinyyl" onclick="raadioValik()" />
                 <label for="vinüülplaat">Vinüülplaat</label>
+            </td>
+            <td>
+                <div id="vastus2"></div>
             </td>
         </tr>
 
-        <!-- Lemmikansamblid märkeruudud / checkboxid -->
         <tr>
             <td>
                 <span>Lemmik ansambel</span>
@@ -109,18 +121,25 @@
             <td>
                 <fieldset>
                     <legend>Tee oma valikud</legend>
-                    <input type="checkbox" name="lemmikud" id="SAMURAI" value="SAMURAI">
+
+                    <input type="checkbox" name="lemmikud" id="SAMURAI" value="SAMURAI" onchange="checkboxVastus()" />
                     <label for="SAMURAI">SAMURAI</label>
                     <br>
-                    <input type="checkbox" name="lemmikud" id="Lifelover" value="Lifelover">
+
+                    <input type="checkbox" name="lemmikud" id="Lifelover" value="Lifelover" onchange="checkboxVastus()" />
                     <label for="Lifelover">Lifelover</label>
                     <br>
-                    <input type="checkbox" name="lemmikud" id="Curta'n Wall" value="Curta'n Wall">
+
+                    <input type="checkbox" name="lemmikud" id="Curta'n Wall" value="Curtan Wall" onchange="checkboxVastus()" />
                     <label for="Curta'n Wall">Curta'n Wall</label>
                     <br>
-                    <input type="checkbox" name="lemmikud" id="Cracked Bascienet" value="Cracked Bascienet">
+
+                    <input type="checkbox" name="lemmikud" id="Cracked Bascienet" value="Cracked Bascienet" onchange="checkboxVastus()" />
                     <label for="Cracked Bascienet">Cracked Bascienet</label>
                 </fieldset>
+            </td>
+            <td>
+                <div id="vastus3"></div>
             </td>
         </tr>
 
@@ -129,15 +148,46 @@
                 <label for="tund">Mitu tundi päevas sa kuulad muusikat?</label>
             </td>
             <td>
-                0 <input type="range" id="tund" name="tund" min="0" max="24" value="12"> 24
+                0
+                <input type="range" id="tund" name="tund" min="0" max="24" value="12" onchange="rangeValik()" />
+                24
+            </td>
+            <td>
+                <div id="vastus4"></div>
             </td>
         </tr>
 
-        <!--Input type=color, file, email, jne kokku 5-6tk
-        https://www.w3schools.com/Html/ -->
+        <tr>
+            <td>
+                <label for="radiokusimus">Kas sa kuulad raadiot?</label>
+            </td>
+            <td>
+                <input type="radio" name="radiokusimus" id="jah" value="jah" onchange="kuuladradio()" />
+                <label for="jah">jah</label>
 
+                <input type="radio" name="radiokusimus" id="ei" value="ei" onchange="kuuladradio()" />
+                <label for="ei">ei</label>
+            </td>
+            <td>
+                <div id="vastus6"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="reset" value="Puhasta" onClick="" />
+            </td>
+            <td>
+                <input type="button" value="Näita/loe andmed" onclick="naitaKoike()" />
+            </td>
+            <td>
+                <div id="vastuskoik"></div>
+            </td>
+        </tr>
 
     </table>
+
+
 </form>
 
 </body>
