@@ -79,11 +79,15 @@
             Kas sulle meeldib programmeerida?
         </td>
         <td>
-            <input type="radio" name="programKusimus" id="jah" value="jah" onchange="meldibProgrameerimine()" />
-            <label for="jah">jah  <img src="images/smile.png" alt="" width="25"/></label>
+            <input type="radio" name="programKusimus" id="jah" value="jah" onchange="meldibProgrameerimine()">
+            <label for="jah">
+                jah <img src="images/smile.png" alt="" width="25">
+            </label>
 
-            <input type="radio" name="programKusimus" id="ei" value="ei" onchange="meldibProgrameerimine()" />
-            <label for="ei">ei  <img src="images/kurb.png" alt="" width="25"></label>
+            <input type="radio" name="programKusimus" id="ei" value="ei" onchange="meldibProgrameerimine()">
+            <label for="ei">
+                ei <img src="images/kurb.png" alt="" width="25">
+            </label>
         </td>
         <td>
             <div id="vastus4"></div>
@@ -94,9 +98,7 @@
         <td>
             Milliseid programmeerimisega seotud tööriistu oskad nimetada?
             <br>
-            <h3>
-                kirjuta sissekande kaudu
-            </h3>
+            <p>kirjuta sissekande kaudu</p>
         </td>
         <td>
             <input type="text" id="text2" oninput="textvastus2()">
@@ -138,8 +140,6 @@
         <td>
             <button type="button" onclick="saadaVastused()">Saada</button>
             <button type="button" onclick="puhastaVorm()">Puhasta</button>
-
-
         </td>
         <td>
             <div id="kokkuvote">
@@ -148,9 +148,6 @@
             </div>
         </td>
     </tr>
-</table>
-
-
 </table>
 
 </body>
