@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Programmeerimine küsimustik</title>
+
+    <link rel="stylesheet" href="styleVormid.css">
+    <script src="vormidJavaScript.js"></script>
+</head>
+
+<body>
+
+<h1 id="h21">Programmeerija küsitlus</h1>
+
+<table id="table1">
+    <tr>
+        <th>Küsimus</th>
+        <th>kirjuta</th>
+        <th>Vastus</th>
+    </tr>
+
+    <tr id="programkeel">
+        <td>
+            Milliseid programmeerimiskeeli sa tead?
+        </td>
+
+        <td>
+            <fieldset>
+                <legend>Tee oma valikud</legend>
+
+                <input type="checkbox" name="keel" id="cSharp" value="C#" onchange="checkboxVastusVorimd()">
+                <label for="cSharp">C#</label>
+                <br>
+
+                <input type="checkbox" name="keel" id="SQL" value="SQL" onchange="checkboxVastusVorimd()">
+                <label for="SQL">SQL</label>
+                <br>
+
+                <input type="checkbox" name="keel" id="HTML" value="HTML" onchange="checkboxVastusVorimd()">
+                <label for="HTML">HTML</label>
+                <br>
+
+                <input type="checkbox" name="keel" id="css" value="CSS" onchange="checkboxVastusVorimd()">
+                <label for="css">CSS</label>
+            </fieldset>
+        </td>
+
+        <td>
+            <div id="vastus"></div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Mida arvad programmeerimise õppimisest?
+        </td>
+        <td>
+            <input type="text" id="experience" oninput="textvastus()">
+        </td>
+        <td>
+            <div id="vastus2"></div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Mitu tundi nädalas tegeled programmeerimisega?
+        </td>
+        <td>
+            <input type="number" id="tund" oninput="numbertvastus()">
+        </td>
+        <td>
+            <div id="vastus3"></div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Kas sulle meeldib programmeerida?
+        </td>
+        <td>
+            <input type="radio" name="programKusimus" id="jah" value="jah" onchange="meldibProgrameerimine()" />
+            <label for="jah">jah  <img src="images/smile.png" alt="" width="25"/></label>
+
+            <input type="radio" name="programKusimus" id="ei" value="ei" onchange="meldibProgrameerimine()" />
+            <label for="ei">ei  <img src="images/kurb.png" alt="" width="25"></label>
+        </td>
+        <td>
+            <div id="vastus4"></div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Milliseid programmeerimisega seotud tööriistu oskad nimetada?
+            <br>
+            <h3>
+                kirjuta sissekande kaudu
+            </h3>
+        </td>
+        <td>
+            <input type="text" id="text2" oninput="textvastus2()">
+        </td>
+        <td>
+            <div id="vastus5"></div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Millist programmeerimiskeelt sooviksid kõige rohkem õppida?
+        </td>
+
+        <td>
+            <select id="meeldiv" onchange="saadaVastused()">
+                <option value="">Vali keel</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="C#">C#</option>
+                <option value="PHP">PHP</option>
+                <option value="C++">C++</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="SQL">SQL</option>
+            </select>
+        </td>
+
+        <td>
+            <div id="fd"></div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Küsimustiku kokkuvõte
+        </td>
+        <td>
+            <button type="button" onclick="saadaVastused()">Saada</button>
+            <button type="button" onclick="puhastaVorm()">Puhasta</button>
+
+
+        </td>
+        <td>
+            <div id="kokkuvote">
+                <h2>Küsimustiku kokkuvõte</h2>
+                <div id="kokkuvoteSisu"></div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+</table>
+
+</body>
+</html>
+
