@@ -75,6 +75,7 @@ input[type=radio] {
 
 input[type=radio]:hover, input[type=radio]:focus {
     background-color: red;
+    transition: 250ms;
 }
 
 input[type=checkbox] {
