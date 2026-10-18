@@ -1,0 +1,55 @@
+Kalkulaatori piltide allikad
+Kõik pildid on pärit Wikimedia Commonsist.
+
+Litsentsid CC BY ja CC BY-SA nõuavad autori nimetamist ka mittearilisel
+kasutamisel. CC0 ja Public domain seda ei nõua, kuid autor on hea tava
+korras siiski ära toodud.
+
+
+meeter.jpg   "Retractable twenty meter tape measure 1.jpg"
+             Autor: W.carter | Litsents: CC0
+             https://commons.wikimedia.org/wiki/File:Retractable_twenty_meter_tape_measure_1.jpg
+
+toll.png     "Width of man's thumb one inch ruler.png"
+             Autor: WhatamIdoing | Litsents: CC BY 4.0
+             https://commons.wikimedia.org/wiki/File:Width_of_man%27s_thumb_one_inch_ruler.png
+
+kohv.jpg     "Coffee cup and saucer.jpg"
+             Autor: Navaneeth Krishnan S | Litsents: CC BY-SA 4.0
+             https://commons.wikimedia.org/wiki/File:Coffee_cup_and_saucer.jpg
+
+vesi.jpg     "Water Glass (6579974749).jpg"
+             Autor: Kurt Bauschardt | Litsents: CC BY-SA 2.0
+             https://commons.wikimedia.org/wiki/File:Water_Glass_(6579974749).jpg
+
+cola.jpg     "15-09-26-RalfR-WLC-0098 - Coca-Cola glass bottle (Germany).jpg"
+             Autor: Ralf Roletschek | Litsents: Public domain
+             https://commons.wikimedia.org/wiki/File:15-09-26-RalfR-WLC-0098_-_Coca-Cola_glass_bottle_(Germany).jpg
+
+fanta.jpg    "Fanta Orange Bottle.jpg"
+             Autor: Ayakln | Litsents: CC BY-SA 4.0
+             https://commons.wikimedia.org/wiki/File:Fanta_Orange_Bottle.jpg
+
+km_miil.jpg  "Distance road sign, Lyell Highway, Granton, Tasmania.jpg"
+             Autor: Chuq | Litsents: CC BY-SA 4.0
+             https://commons.wikimedia.org/wiki/File:Distance_road_sign,_Lyell_Highway,_Granton,_Tasmania.jpg
+
+miil_km.jpg  "38 mph (60 kph) speed limit sign - geograph.org.uk - 859388.jpg"
+             Autor: Phillip Williams | Litsents: CC BY-SA 2.0
+             https://commons.wikimedia.org/wiki/File:38_mph_(60_kph)_speed_limit_sign_-_geograph.org.uk_-_859388.jpg
+
+kg_nael.jpg  "Iron 16kg.jpg"
+             Autor: N.Manytchkine | Litsents: CC BY-SA 3.0
+             https://commons.wikimedia.org/wiki/File:Iron_16kg.jpg
+
+nael_kg.jpg  "One pound avoirdupois weight - Musee des arts et metiers - Inv 3287 - 01.jpg"
+             Autor: Poulpy | Litsents: CC BY-SA 4.0
+             https://commons.wikimedia.org/wiki/File:One_pound_avoirdupois_weight_-_Mus%C3%A9e_des_arts_et_m%C3%A9tiers_-_Inv_3287_-_01.jpg
+
+c_f.png      "Thermometer Graphic.png"
+             Autor: Sarah Greenwood | Litsents: CC BY 4.0
+             https://commons.wikimedia.org/wiki/File:Thermometer_Graphic.png
+
+f_c.jpg      "Raumthermometer Fahrenheit+Celsius.jpg"
+             Autor: Stilfehler | Litsents: Public domain
+             https://commons.wikimedia.org/wiki/File:Raumthermometer_Fahrenheit%2BCelsius.jpg
