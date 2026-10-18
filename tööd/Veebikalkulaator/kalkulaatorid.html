@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulaatorid</title>
+
+    <link rel="stylesheet" href="kalkStyle.css">
+    <script src="kalk1Script.js"></script>
+    <script src="kalk2Script.js"></script>
+    <script src="kalk3Script.js"></script>
+</head>
+
+<body>
+
+<h1>Kalkulaatorid</h1>
+
+<section id="yld">
+    <!--css paigutus flex row-->
+
+    <section id="kalk1">
+        <h2>Meetri/tolli kalkulaator</h2>
+
+        <label for="arv">Sisesta arv: </label>
+        <input type="number" id="arv" min="1" max="100" step="1" value="1" onchange="teisendamine()">
+        <br>
+
+        <input type="radio" name="valik" id="meeter" value="meeter" onchange="teisendamine()">
+        <label for="meeter">Meeter</label>
+        <br>
+
+        <input type="radio" name="valik" id="tolli" value="tolli" onchange="teisendamine()">
+        <label for="tolli">Toll</label>
+
+        <div id="vastus"></div>
+        <img src="" alt="Teisenduse pilt" id="vastusepilt">
+    </section>
+
+    <section id="kalk2">
+        <h2>Joogi kalkulaator</h2>
+
+        <label for="kogus">Mitu tk soovid:</label>
+        <input type="number" id="kogus" min="1" max="10" step="1" value="1" onchange="jookideValik()">
+        <br>
+
+        <label for="joogiValik">Vali lemmikjook:</label>
+        <select name="joogiValik" id="joogiValik" onchange="jookideValik()">
+            <option value="">vali</option>
+            <option value="kohv">kohv</option>
+            <option value="vesi">vesi</option>
+            <option value="Coca">Coca-Cola</option>
+            <option value="Fanta">Fanta</option>
+        </select>
+
+        <div id="vastus2"></div>
+        <img src="" alt="Joogi pilt" id="vastusepilt2">
+    </section>
+
+    <section id="kalk3">
+        <h2>Ühikute teisendaja</h2>
+
+        <label for="arv3">Sisesta arv: </label>
+        <input type="number" id="arv3" min="-100" max="10000" step="0.1" value="1" onchange="yhikuteTeisendamine()">
+        <br>
+
+        <input type="radio" name="yhik" id="km_miil" value="km_miil" onchange="yhikuteTeisendamine()">
+        <label for="km_miil">km &harr; miilid (km-st miiliks)</label>
+        <br>
+
+        <input type="radio" name="yhik" id="miil_km" value="miil_km" onchange="yhikuteTeisendamine()">
+        <label for="miil_km">miilid &harr; km (miilist km-ks)</label>
+        <br>
+
+        <input type="radio" name="yhik" id="kg_nael" value="kg_nael" onchange="yhikuteTeisendamine()">
+        <label for="kg_nael">kg &harr; naelad (kg-st naelaks)</label>
+        <br>
+
+        <input type="radio" name="yhik" id="nael_kg" value="nael_kg" onchange="yhikuteTeisendamine()">
+        <label for="nael_kg">naelad &harr; kg (naelast kg-ks)</label>
+        <br>
+
+        <input type="radio" name="yhik" id="c_f" value="c_f" onchange="yhikuteTeisendamine()">
+        <label for="c_f">&deg;C &harr; &deg;F (C-st F-iks)</label>
+        <br>
+
+        <input type="radio" name="yhik" id="f_c" value="f_c" onchange="yhikuteTeisendamine()">
+        <label for="f_c">&deg;F &harr; &deg;C (F-ist C-ks)</label>
+
+        <div id="vastus3"></div>
+        <img src="" alt="Ühiku pilt" id="vastusepilt3">
+    </section>
+
+</section>
+
+</body>
+</html>

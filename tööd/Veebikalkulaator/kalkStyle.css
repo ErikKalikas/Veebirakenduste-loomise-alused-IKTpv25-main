@@ -1,0 +1,63 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    margin: 30px;
+    background-color: linen;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    border: 2px solid black;
+    background-color: darkslategray;
+    color: linen;
+    padding: 10px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    color: darkslategray;
+}
+
+section#yld {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+section#kalk1 {
+    border: 2px solid darkolivegreen;
+    border-radius: 10px;
+    width: 30%;
+    padding: 10px;
+    background-color: lightgreen;
+}
+
+section#kalk2 {
+    border: 2px solid darkgoldenrod;
+    border-radius: 10px;
+    width: 30%;
+    padding: 10px;
+    background-color: peachpuff;
+}
+
+section#kalk3 {
+    border: 2px solid rebeccapurple;
+    border-radius: 10px;
+    width: 30%;
+    padding: 10px;
+    background-color: thistle;
+}
+
+img#vastusepilt {
+    height: 100px;
+    width: auto;
+}
+
+img#vastusepilt2 {
+    height: 100px;
+    width: auto;
+}
+
+img#vastusepilt3 {
+    height: 100px;
+    width: auto;
+}
