@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>JS: Objektid ja meetodid</title>
+    <script src="ramatukogu.js"></script>
+</head>
+<body>
+<h1>JS: Objektid ja meetodid</h1>
+
+<h2>Raamatu objekt</h2>
+<input type="button" value="Raamatu kirjeldus" onclick="naitaKirjeldus()">
+<div id="kirjeldus"></div>
+<br>
+<label for="uusAasta">Uus aasta:</label>
+<input type="number" id="uusAasta">
+<input type="button" value="Muuda aastat" onclick="muudaAastat()">
+<div id="aastaVastus"></div>
+
+<h2>Raamatukogu</h2>
+<input type="button" value="Kõik raamatud" onclick="naitaRaamatud()">
+<input type="button" value="Raamatute arv" onclick="naitaKoguarv()">
+<input type="button" value="Pärast 2000. aastat" onclick="naitaParast2000()">
+<div id="raamatud"></div>
+
+<h3>Lisa uus raamat</h3>
+<label for="pealkiri">Pealkiri:</label>
+<input type="text" id="pealkiri">
+<label for="autor">Autor:</label>
+<input type="text" id="autor">
+<label for="aasta">Aasta:</label>
+<input type="number" id="aasta">
+<input type="button" value="Lisa raamat" onclick="lisaUusRaamat()">
+<div id="lisaVastus"></div>
+
+<h3>Minu meetod: otsi autori järgi</h3>
+<p>Meetod otsiAutor() otsib raamatukogust kõik raamatud,
+    mille autor on sisestatud nimi. Selleks kasutab see filter() meetodit ,
+    mis teeb uue massiivi ainult nendest raamatutest,
+    mis tingimusele vastavad.</p>
+<label for="otsiAutor">Autor:</label>
+<input type="text" id="otsiAutor">
+<input type="button" value="Otsi" onclick="otsiAutori()">
+<div id="otsiVastus"></div>
+</body>
+</html>
