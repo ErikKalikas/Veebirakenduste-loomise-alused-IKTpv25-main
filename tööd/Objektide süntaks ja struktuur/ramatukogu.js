@@ -4,16 +4,13 @@ const raamat = {
     aasta: 1912,
 
     kirjeldus() {
-        return "Raamat \"" + this.pealkiri + "\", autor " + this.autor + ", välja antud " + this.aasta + ". aastal";
+        return this.pealkiri + ", " + this.autor + ", " + this.aasta;
     },
 
-    muudaAasta(uusAasta) {
-        const vanaAasta = this.aasta;
-        this.aasta = uusAasta;
-        console.log("Vana aasta: " + vanaAasta);
-        console.log("Uus aasta: " + this.aasta);
-        console.log(this.kirjeldus());
-        return "Aasta muudetud: " + vanaAasta + " → " + this.aasta + "<br>" + this.kirjeldus();
+    muudaAasta(uus) {
+        console.log("Enne: " + this.kirjeldus());
+        this.aasta = uus;
+        console.log("Pärast: " + this.kirjeldus());
     }
 };
 
@@ -26,101 +23,95 @@ const raamatukogu = {
         { pealkiri: "Seltsimees laps", autor: "Leelo Tungal", aasta: 2008 }
     ],
 
-    kuvaRaamatud() {
+    kuva() {
         let tekst = "";
-        this.raamatud.forEach((raamat, i) => {
-            const rida = (i + 1) + ". " + raamat.pealkiri + " - " + raamat.autor + " (" + raamat.aasta + ")";
-            console.log(rida);
-            tekst = tekst + rida + "<br>";
+        this.raamatud.forEach((r) => {
+            console.log(r.pealkiri + " - " + r.autor + " (" + r.aasta + ")");
+            tekst = tekst + r.pealkiri + " - " + r.autor + " (" + r.aasta + ")<br>";
         });
         return tekst;
     },
 
-    lisaRaamat(pealkiri, autor, aasta) {
+    lisa(pealkiri, autor, aasta) {
         this.raamatud.push({ pealkiri: pealkiri, autor: autor, aasta: aasta });
-        console.log("Lisatud raamat: " + pealkiri + " - " + autor + " (" + aasta + ")");
-        return "Lisatud raamat: " + pealkiri + " - " + autor + " (" + aasta + ")";
+        console.log("Lisatud: " + pealkiri);
     },
 
-    koguarv() {
-        console.log("Raamatukogus on " + this.raamatud.length + " raamatut");
-        return "Raamatukogus on " + this.raamatud.length + " raamatut";
+    kokku() {
+        console.log("Raamatuid kokku: " + this.raamatud.length);
+        return this.raamatud.length;
     },
 
     parast2000() {
-        const uued = this.raamatud.filter(raamat => raamat.aasta > 2000);
-        console.log("Pärast 2000. aastat on ilmunud " + uued.length + " raamatut");
-        return "Pärast 2000. aastat on ilmunud " + uued.length + " raamatut";
+        const uued = this.raamatud.filter(r => r.aasta > 2000);
+        console.log("Pärast 2000. aastat: " + uued.length);
+        return uued.length;
     },
 
-    // Minu meetod: otsib kõik raamatud, mille autor on antud nimi (filter teeb uue massiivi leitud raamatutest)
     otsiAutor(autor) {
-        const leitud = this.raamatud.filter(raamat => raamat.autor.toLowerCase() === autor.toLowerCase());
-        if (leitud.length === 0) {
-            console.log("Autorilt " + autor + " raamatuid ei leitud");
-            return "Autorilt " + autor + " raamatuid ei leitud";
-        }
-        let tekst = "Autori " + autor + " raamatud:<br>";
-        console.log("Autori " + autor + " raamatud:");
-        leitud.forEach(raamat => {
-            console.log(raamat.pealkiri + " (" + raamat.aasta + ")");
-            tekst = tekst + raamat.pealkiri + " (" + raamat.aasta + ")<br>";
+        const leitud = this.raamatud.filter(r => r.autor === autor);
+        let tekst = "";
+        leitud.forEach((r) => {
+            console.log(r.pealkiri + " (" + r.aasta + ")");
+            tekst = tekst + r.pealkiri + " (" + r.aasta + ")<br>";
         });
+        if (tekst === "") {
+            console.log("Ei leitud");
+            tekst = "Ei leitud";
+        }
         return tekst;
     }
 };
 
 console.log(raamat);
-console.log(raamat.kirjeldus());
-console.log(raamatukogu.raamatud);
+console.log(raamatukogu);
 
-function naitaKirjeldus() {
-    const vastus = document.getElementById("kirjeldus");
-    vastus.innerHTML = raamat.kirjeldus();
+function naita() {
+    const vastus1 = document.getElementById("vastus1");
+    vastus1.innerHTML = raamat.kirjeldus();
     console.log(raamat.kirjeldus());
 }
 
-function muudaAastat() {
-    const uusAasta = Number(document.getElementById("uusAasta").value);
-    const vastus = document.getElementById("aastaVastus");
-    if (uusAasta === 0) {
-        vastus.innerHTML = "Sisesta aasta!";
-        return;
-    }
-    vastus.innerHTML = raamat.muudaAasta(uusAasta);
+function muuda() {
+    const uus = Number(document.getElementById("uusAasta").value);
+    raamat.muudaAasta(uus);
+
+    const vastus2 = document.getElementById("vastus2");
+    vastus2.innerHTML = "Nüüd: " + raamat.kirjeldus();
 }
 
-function naitaRaamatud() {
-    const vastus = document.getElementById("raamatud");
-    vastus.innerHTML = raamatukogu.kuvaRaamatud();
+function koik() {
+    const vastus3 = document.getElementById("vastus3");
+    vastus3.innerHTML = raamatukogu.kuva();
 }
 
-function naitaKoguarv() {
-    const vastus = document.getElementById("raamatud");
-    vastus.innerHTML = raamatukogu.koguarv();
+function arv() {
+    const vastus3 = document.getElementById("vastus3");
+    vastus3.innerHTML = "Raamatuid kokku: " + raamatukogu.kokku();
 }
 
-function naitaParast2000() {
-    const vastus = document.getElementById("raamatud");
-    vastus.innerHTML = raamatukogu.parast2000();
+function uued() {
+    const vastus3 = document.getElementById("vastus3");
+    vastus3.innerHTML = "Pärast 2000. aastat: " + raamatukogu.parast2000();
 }
 
-function lisaUusRaamat() {
+function lisaRaamat() {
     const pealkiri = document.getElementById("pealkiri").value;
     const autor = document.getElementById("autor").value;
     const aasta = Number(document.getElementById("aasta").value);
-    const vastus = document.getElementById("lisaVastus");
+    const vastus4 = document.getElementById("vastus4");
 
-    if (pealkiri === "" || autor === "" || aasta === 0) {
-        vastus.innerHTML = "Täida kõik väljad!";
-        return;
+    if (pealkiri === "" || autor === "") {
+        vastus4.innerHTML = "Kirjuta pealkiri ja autor!";
+    } else {
+        raamatukogu.lisa(pealkiri, autor, aasta);
+        vastus4.innerHTML = "Lisatud: " + pealkiri;
+        koik();
     }
-    vastus.innerHTML = raamatukogu.lisaRaamat(pealkiri, autor, aasta);
-    naitaRaamatud();
 }
 
-function otsiAutori() {
-    const autor = document.getElementById("otsiAutor").value;
-    const vastus = document.getElementById("otsiVastus");
-    vastus.innerHTML = raamatukogu.otsiAutor(autor);
+function otsi() {
+    const autor = document.getElementById("otsing").value;
+    const vastus5 = document.getElementById("vastus5");
+    vastus5.innerHTML = raamatukogu.otsiAutor(autor);
 }
