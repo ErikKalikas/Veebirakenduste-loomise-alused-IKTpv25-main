@@ -1,3 +1,22 @@
+// KONSPEKT: JS objektide süntaks ja struktuur
+//
+// Objekt hoiab ühe asjaga seotud andmed koos (nt auto: mark, mudel, aasta).
+// Objekt koosneb võtme ja väärtuse paaridest: { võti: väärtus }
+// Väärtus võib olla tekst, arv, massiiv või funktsioon.
+//
+// Sisseehitatud objektid:
+// Math   - matemaatika (ümardamine, ruutjuur)
+// Date   - kuupäevad ja kellaajad
+// Array  - massiivid ja nende meetodid
+// String - tekst (length, toUpperCase, substring)
+// Object - kõikide objektide alus
+//
+// Igal nupul on oma funktsioon, mis näitab ühte teemat
+// konsoolis (console.log) ja lehel (innerHTML).
+
+// Objekti loomine
+// Objekt tehakse { } sulgudega, omadused eraldatakse komaga.
+// Punktisüntaks: auto.mark annab "Toyota"
 function naitaAuto() {
     const auto = {
         mark: "Toyota",
@@ -27,6 +46,9 @@ function naitaAuto() {
     vastus1.innerHTML = tekst;
 }
 
+// Objekti meetodid ja this kasutamine
+// Meetod on funktsioon objekti sees.
+// this tähendab sama objekti: this.mark = auto.mark
 function nimi() {
     const auto = {
         mark: "Toyota",
@@ -45,6 +67,9 @@ function nimi() {
     vastus2.innerHTML = "Auto täisnimi on " + auto.taisnimi();
 }
 
+// Meetodi lühendamine (ES6)
+// taisnimi: function() { } asemel võib kirjutada taisnimi() { }
+// Kui omadus on massiiv, siis kasuta forEach tsüklit
 function omadused() {
     const auto = {
         mark: "Toyota",
@@ -71,6 +96,10 @@ function omadused() {
     vastus3.innerHTML = tekst;
 }
 
+// Objektide massiivi loomine ja kuvamine
+// Objektide massiiv on massiiv, kus iga element on objekt.
+// Indeks algab 0-st: autod[0] on esimene auto, autod[0].mark tema mark
+// forEach käib kõik autod läbi
 function koikAutod() {
     const autod = [
         { mark: 'Toyota', mudel: 'Corolla', aasta: 2007 },
@@ -92,6 +121,10 @@ function koikAutod() {
     vastus4.innerHTML = tekst;
 }
 
+// Objekti massiivi meetodid
+// push()    - lisab lõppu
+// unshift() - lisab algusesse
+// splice(algus, mitu eemaldada, mida lisada) - kustutab ja lisab korraga
 function lisa() {
     const autod = [
         { mark: 'Toyota', mudel: 'Corolla', aasta: 2007 },
@@ -116,6 +149,9 @@ function lisa() {
     vastus5.innerHTML = tekst;
 }
 
+// Massiivist otsimine
+// find() leiab esimese sobiva elemendi, kui ei leia, siis undefined
+// Mitu tingimust korraga: &&
 function otsi() {
     const autod = [
         { mark: 'Toyota', mudel: 'Corolla', aasta: 2007 },
@@ -135,6 +171,9 @@ function otsi() {
     vastus6.innerHTML = "Leitud auto: " + otsing.mark + " " + otsing.mudel + " " + otsing.aasta;
 }
 
+// Massiivi filtreerimine
+// filter() teeb uue massiivi kõigist sobivatest elementidest
+// arv % 2 === 0 tähendab, et arv jagub 2-ga (paarisarv)
 function filtreeri() {
     const arvud = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const filtreeritud = arvud.filter(arv => arv % 2 === 0);
@@ -163,6 +202,10 @@ function filtreeri() {
     vastus7.innerHTML = tekst;
 }
 
+// Massiivi sorteerimine
+// sort() vajab objektide puhul võrdlusfunktsiooni
+// a.aasta - b.aasta: kui tulemus on negatiivne, läheb a ette
+// Nii sorteeritakse väiksemast suuremani
 function sorteeri() {
     const autod = [
         { mark: 'Toyota', mudel: 'Corolla', aasta: 2007 },
