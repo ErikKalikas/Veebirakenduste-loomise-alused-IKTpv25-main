@@ -1,3 +1,4 @@
+
 function checkboxVastusVorimd() {//1. Milliseid programmeerimiskeeli sa tead?
 
     let vastus = document.getElementById("vastus");
@@ -234,3 +235,94 @@ function puhastaVorm() {//8. Lisa küsimustiku lõppu nupp „Puhasta“.
 
     document.getElementById("kokkuvote").style.display = "none";
 }
+
+// jQuery vormi valideerimine
+// Konspekt: https://metshein.com/courses/jquery/lessons/jquery-vormi-valideerimine-tekstivaljad/
+// jQuery dokumentatsioon: https://api.jquery.com/
+
+$(document).ready(function () {
+
+    $('.viga').hide(); // alguses peidame kõik veateated
+
+    // vajutame nuppu "Saada"
+    $('#saada').click(function () {
+        let korras = true; // kui leiame vea, muutub see false-ks
+
+        // 1. checkbox: vähemalt üks keel peab olema valitud
+        if ($('input[name="keel"]:checked').length < 1) {
+            naitaViga('#programkeel fieldset', '#viga1');
+            korras = false;
+        } else {
+            peidaViga('#programkeel fieldset', '#viga1');
+        }
+
+        // 2. tekstiväli ei tohi olla tühi
+        if ($('#experience').val().trim().length < 1) {
+            naitaViga('#experience', '#viga2');
+            korras = false;
+        } else {
+            peidaViga('#experience', '#viga2');
+        }
+
+        // 3. tunnid: ei tohi olla tühi ja peab olema 0 kuni 168
+        let tunnid = parseInt($('#tund').val()); // teisendab teksti täisarvuks
+        if (isNaN(tunnid) || tunnid < 0 || tunnid > 168) {
+            naitaViga('#tund', '#viga3');
+            korras = false;
+        } else {
+            peidaViga('#tund', '#viga3');
+        }
+
+        // 4. raadionupp: jah või ei peab olema valitud
+        if ($('input[name="programKusimus"]:checked').length < 1) {
+            naitaViga($('#jah').closest('td'), '#viga4');
+            korras = false;
+        } else {
+            peidaViga($('#jah').closest('td'), '#viga4');
+        }
+
+        // 5. tekstiväli ei tohi olla tühi
+        if ($('#text2').val().trim().length < 1) {
+            naitaViga('#text2', '#viga5');
+            korras = false;
+        } else {
+            peidaViga('#text2', '#viga5');
+        }
+
+        // 6. rippmenüüst peab olema keel valitud
+        if ($('#meeldiv').val() === '') {
+            naitaViga('#meeldiv', '#viga6');
+            korras = false;
+        } else {
+            peidaViga('#meeldiv', '#viga6');
+        }
+
+        // kokkuvõte tuleb ainult siis, kui vigu ei ole
+        if (korras) {
+            $('#yldViga').hide();
+            saadaVastused();
+        } else {
+            $('#yldViga').fadeIn(400);
+            $('#kokkuvoteSisu').html('');
+        }
+    });
+
+    // nupp "Puhasta" peidab ka veateated
+    $('#puhasta').click(function () {
+        $('.viga').hide();
+        $('.vigane').removeClass('vigane');
+    });
+});
+
+// näitab veateadet ja teeb välja punaseks
+function naitaViga(vali, viga) {
+    $(vali).addClass('vigane');
+    $(viga).fadeIn(400);
+}
+
+// peidab veateate ja võtab punase värvi ära
+function peidaViga(vali, viga) {
+    $(vali).removeClass('vigane');
+    $(viga).hide();
+}
+ 

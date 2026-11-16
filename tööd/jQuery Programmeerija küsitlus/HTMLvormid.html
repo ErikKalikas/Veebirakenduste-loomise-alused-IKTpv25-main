@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="et">
 <head>
@@ -5,6 +6,9 @@
     <title>Programmeerimine küsimustik</title>
 
     <link rel="stylesheet" href="styleVormid.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
     <script src="vormidJavaScript.js"></script>
 </head>
 
@@ -43,6 +47,7 @@
                 <input type="checkbox" name="keel" id="css" value="CSS" onchange="checkboxVastusVorimd()">
                 <label for="css">CSS</label>
             </fieldset>
+            <span class="viga" id="viga1">Vali vähemalt üks programmeerimiskeel!</span>
         </td>
 
         <td>
@@ -56,6 +61,7 @@
         </td>
         <td>
             <input type="text" id="experience" oninput="textvastus()">
+            <span class="viga" id="viga2">Seda välja ei tohi jätta tühjaks!</span>
         </td>
         <td>
             <div id="vastus2"></div>
@@ -68,6 +74,7 @@
         </td>
         <td>
             <input type="number" id="tund" oninput="numbertvastus()">
+            <span class="viga" id="viga3">Kirjuta tundide arv 0 kuni 168!</span>
         </td>
         <td>
             <div id="vastus3"></div>
@@ -88,6 +95,7 @@
             <label for="ei">
                 ei <img src="images/kurb.png" alt="" width="25">
             </label>
+            <span class="viga" id="viga4">Vali jah või ei!</span>
         </td>
         <td>
             <div id="vastus4"></div>
@@ -102,6 +110,7 @@
         </td>
         <td>
             <input type="text" id="text2" oninput="textvastus2()">
+            <span class="viga" id="viga5">Seda välja ei tohi jätta tühjaks!</span>
         </td>
         <td>
             <div id="vastus5"></div>
@@ -114,7 +123,7 @@
         </td>
 
         <td>
-            <select id="meeldiv" onchange="saadaVastused()">
+            <select id="meeldiv">
                 <option value="">Vali keel</option>
                 <option value="JavaScript">JavaScript</option>
                 <option value="Python">Python</option>
@@ -126,6 +135,7 @@
                 <option value="CSS">CSS</option>
                 <option value="SQL">SQL</option>
             </select>
+            <span class="viga" id="viga6">Vali üks keel!</span>
         </td>
 
         <td>
@@ -138,8 +148,9 @@
             Küsimustiku kokkuvõte
         </td>
         <td>
-            <button type="button" onclick="saadaVastused()">Saada</button>
-            <button type="button" onclick="puhastaVorm()">Puhasta</button>
+            <button type="button" id="saada">Saada</button>
+            <button type="button" id="puhasta" onclick="puhastaVorm()">Puhasta</button>
+            <span class="viga" id="yldViga">Vormis on vigu! Paranda punasega märgitud väljad.</span>
         </td>
         <td>
             <div id="kokkuvote">
@@ -152,4 +163,5 @@
 
 </body>
 </html>
-
+ 
+ 

@@ -1,3 +1,4 @@
+
 h1{
     border: 1px black solid;
 }
@@ -49,3 +50,17 @@ button:hover {
     padding: 15px;
     border: 2px solid blue;
 }
+
+/*jQuery valideerimine*/
+.viga {
+    display: block;
+    color: red;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.vigane {
+    border: 2px solid red;
+    background-color: #ffe0e0;
+}
+ 
