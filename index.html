@@ -33,6 +33,18 @@
             $('#kast1, #kast2').draggable({
                 drag: xyKoordinat
             });
+
+            // UUS EFEKT 1: .slideToggle() – kast libiseb kinni/lahti
+            // allikas: https://api.jquery.com/slideToggle/
+            $('#libista').on('click', function () {
+                $('#efektiKast').slideToggle(800);
+            });
+
+            // UUS EFEKT 2: .fadeToggle() – kast hajub ära / ilmub tagasi
+            // allikas: https://api.jquery.com/fadeToggle/
+            $('#hajuta').on('click', function () {
+                $('#efektiKast').fadeToggle(800);
+            });
         });
 
         function xyKoordinat(event, ui) {
@@ -98,6 +110,29 @@
         <div>
             <img src="E..png.png" alt="pilt">
         </div>
+        <div id="vastus"></div>
+    </section>
+
+    <!--uus jQuery efekt-->
+    <section id="kast3">
+        <h3>Uus efekt: slideToggle ja fadeToggle</h3>
+        <input type="button" value="Libista" id="libista">
+        <input type="button" value="Hajuta" id="hajuta">
+        <div id="efektiAla">
+            <div id="efektiKast"></div>
+        </div>
+    </section>
+
+    <!--juhend kasutajale-->
+    <section id="kast4">
+        <h3>Juhend kasutajale</h3>
+        <ul>
+            <li><b>===></b> / <b><===</b>  esimene kast liigub paremale või vasakule.</li>
+            <li><b>Peida</b> / <b>Kuva</b>  esimene kast peidetakse või kuvatakse uuesti.</li>
+            <li>Lohista hiirega esimest kasti või pildiga kasti  pildi all näed koordinaate (x, y).</li>
+            <li><b>Libista</b>  sinine kast libiseb üles kinni, teisel vajutusel libiseb tagasi lahti.</li>
+            <li><b>Hajuta</b>  sinine kast hajub järk-järgult ära, teisel vajutusel ilmub tagasi.</li>
+        </ul>
     </section>
 </main>
 

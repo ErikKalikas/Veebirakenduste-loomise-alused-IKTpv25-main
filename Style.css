@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 
-#paremale, #vasakue{
+#paremale, #vasakule{
     position: relative;
     left: 0;
 }
@@ -136,4 +136,28 @@ nav ul li a:hover { /*link fookuses - hiir on peal*/
 nav {
     padding: 5px;
     margin: 10px;
+}
+/*uus jQuery efekt*/
+#efektiAla {
+    height: 120px; /*koht jääb alles ka siis, kui kast on peidetud*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#efektiKast {
+    width: 150px;
+    height: 100px;
+    background-color: deepskyblue;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-variant: small-caps;
+}
+
+/*juhend kasutajale*/
+section#kast4 ul {
+    text-align: left;
 }
