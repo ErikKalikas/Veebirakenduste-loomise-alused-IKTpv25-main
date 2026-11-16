@@ -3,7 +3,10 @@ body {
     padding: 0;
 }
 
-
+#paremale, #vasakue{
+    position: relative;
+    left: 0;
+}
 
 h1 {
     font-size: larger;
@@ -49,6 +52,8 @@ img {
 }
 
 section#kast1 {
+    position: relative;
+    left:0;
     border: 1px groove lightskyblue; /*solid. doble. dashed, dotted*/
     width: 25%;
     margin: 5px;
@@ -58,6 +63,8 @@ section#kast1 {
 }
 
 section#kast2 {
+    position: relative;
+    left: 0;
     border: 10px groove lightskyblue; /*solid. doble. dashed, dotted*/
     width: 25%;
     margin: 5px;

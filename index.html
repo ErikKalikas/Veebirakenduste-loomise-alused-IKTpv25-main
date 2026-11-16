@@ -5,6 +5,41 @@
     <meta charset="UTF-8">
     <title>Erik veebirakenduste aluste tööd</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+            integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#kuva').hide();
+
+            // nupu peida vajutamine
+            $('#peida').click(function () {
+                $('#kast1').hide(500);
+                $(this).hide();
+                $('#kuva').show();
+            });
+
+            // nupu kuva vajutamine
+            $('#kuva').click(function () {
+                $('#kast1').show(500);
+                $(this).hide();
+                $('#peida').show();
+            });
+
+            // lohistamine
+            $('#kast1, #kast2').draggable({
+                drag: xyKoordinat
+            });
+        });
+
+        function xyKoordinat(event, ui) {
+            let koht = ui.offset;
+            $('#vastus').html('x: ' + Math.round(koht.left) + ' //// y: ' + Math.round(koht.top));
+        }
+    </script>
 </head>
 <body>
 
@@ -15,6 +50,16 @@
     <h1>
         õpilane veebirakenduste aluste tööd
     </h1>
+    <input type="button" value="===>" id="paremale"
+           onclick="$('#kast1').animate({left: '500px'}, 1000);
+                $(this).hide();
+                $('#vasakule').show();">
+    <input type="button" value="<===" id="vasakule" style="display: none;"
+           onclick="$('#kast1').animate({left: '0px'}, 1000);
+                $(this).hide();
+                $('#paremale').show();">
+    <input type="button" value="Kuva" id="kuva">
+    <input type="button" value="Peida" id="peida">
 </header>
 
 <!--navigeerimismenüü-->
