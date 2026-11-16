@@ -1,0 +1,26 @@
+#sisu{
+    position: relative;
+    left:0;
+    width:200px;
+    border: solid 1px green;
+    border-radius: 5px;
+}
+h2{
+  position: relative;
+    left: 0;
+}
+#paremale, #vasakue{
+    position: relative;
+    left: 0;
+}
+
+pilt{
+    position: relative;
+    left: 0;
+    width: 100px;
+    height: 100px;
+}
+
+body{
+    background-color: #F7F7F7;
+}
